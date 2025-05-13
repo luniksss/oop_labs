@@ -12,6 +12,11 @@ CStringNode* CStringNode::GetPrev() const
     return m_prev;
 }
 
+const std::unique_ptr<CStringNode>& CStringNode::GetNext() const
+{
+    return m_next;
+}
+
 std::unique_ptr<CStringNode>& CStringNode::GetNext()
 {
     return m_next;

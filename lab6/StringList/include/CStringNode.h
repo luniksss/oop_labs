@@ -14,6 +14,7 @@ public:
     CStringNode(std::string data, CStringNode* m_prev, std::unique_ptr<CStringNode>&& m_next);
 
     [[nodiscard]] CStringNode* GetPrev() const;
+    [[nodiscard]] const std::unique_ptr<CStringNode>& GetNext() const;
     std::unique_ptr<CStringNode>& GetNext();
     void SetPrev(CStringNode* prev);
     void SetNext(std::unique_ptr<CStringNode>&& next);
